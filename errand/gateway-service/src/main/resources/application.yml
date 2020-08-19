@@ -12,15 +12,20 @@ spring:
         - id: user-service
           uri: lb://user-service
           predicates:
-            - Path=/user-service/**
-          #            - Header=Cookie,Set-Cookie
+            - Path=/userService/**
           filters:
-            - SwaggerHeaderFilter
+            - StripPrefix=1
+        - id: order-service
+          uri: lb://order-service
+          predicates:
+            - Path=/orderService/**
+          filters:
             - StripPrefix=1
       discovery:
         locator:
           enabled: true
           lower-case-service-id: true
+
 eureka:
   instance:
     hostname: localhost
@@ -29,7 +34,6 @@ eureka:
     ip-address: localhost
     prefer-ip-address: true
   client:
-    fetch-registry: false
     service-url:
-      defaultZone: http://182.92.77.133:8761/eureka
+      defaultZone: http://localhost:8761/eureka
 

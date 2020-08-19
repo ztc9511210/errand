@@ -14,7 +14,10 @@ public class OrderServiceApp {
     public static void main(String[] args) {
         SpringApplication.run(OrderServiceApp.class, args);
     }
-    //开启负载均衡
+    /**
+     * 开启负载均衡
+     */
+
     @Bean
     @LoadBalanced
     RestTemplate restTemplate(){

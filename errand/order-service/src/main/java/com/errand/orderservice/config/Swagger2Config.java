@@ -23,7 +23,7 @@ public class Swagger2Config {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.errand.orderservice.*"))
+                .apis(RequestHandlerSelectors.basePackage("com.errand.orderservice.web.rest"))
                 .paths(PathSelectors.any())
                 .build();
     }
