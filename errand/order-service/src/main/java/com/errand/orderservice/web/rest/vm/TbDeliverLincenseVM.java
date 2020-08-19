@@ -1,7 +1,7 @@
 package com.errand.orderservice.web.rest.vm;
 
 
-public class Tb_Deliver_LincenseVM {
+public class TbDeliverLincenseVM {
 
   private long id;
   private long deliverId;

@@ -1,7 +1,7 @@
 package com.errand.orderservice.web.rest.vm;
 
 
-public class Tb_User_AddressVM {
+public class TbUserAddressVM {
 
   private long id;
   private long userId;
